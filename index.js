@@ -1,1 +1,2 @@
-console.log(2 + 2);
+var name = "Mara";
+console.log(name);
