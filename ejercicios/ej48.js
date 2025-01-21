@@ -7,4 +7,4 @@ let significadoDeLaVida = parseInt(mensaje.slice(38, 40));
 let resultado = pi + significadoDeLaVida;
 
 console.log(resultado);
-console.log(`${resultado} es el resultado de sumar las variables pi y significadoDeLaVida, concatenando los valores. Utilizar el método toString para convertir los numbers a strings.`);
+console.log(resultado.toString() + " es el resultado de sumar las variables pi y significadoDeLaVida, concatenando los valores. Utilizar el método toString para convertir los numbers a strings.");
