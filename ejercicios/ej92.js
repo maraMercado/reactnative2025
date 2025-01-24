@@ -17,12 +17,9 @@
                14
 */
 
-let counter = 1;
-let cantAsteriscos = 14;
-let ast = "";
+let m = "";
 
-while (counter <= cantAsteriscos) {
-    ast += "*";
-    console.log(ast)
-    counter++;
+for (let a = 1; a <= 14; a++) {
+    m += "*";
+    console.log(m);
 }
