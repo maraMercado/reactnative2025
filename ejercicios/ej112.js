@@ -33,6 +33,7 @@ function mostrarNumeros (inicio, fin) {
                     console.log("Los números son iguales");
     
         }
+        
     } else {
         console.log("Por favor ingrese números");
     }
