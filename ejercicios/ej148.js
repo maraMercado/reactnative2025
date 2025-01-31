@@ -14,8 +14,15 @@ superheroe.nombreSecreto = "Bruce";
 superheroe.ayudantes = ["Robin", "Alfred", "Gordon"];
 superheroe.fuerza = 70;
 
+/* 
+1- entrar al objeto superheroe
+2- ciclo: por cada propiedad, mostrar su valor.
+*/
+
 const propiedades = Object.keys(superheroe);
 
-for (let i = 0; i < propiedades.length; i++) {
-    console.log(superheroe[propiedades][i])
-};
+propiedades.forEach (function (valor) {
+    console.log(superheroe[valor]);
+})
+
+console.log(superheroe.intelecto);
