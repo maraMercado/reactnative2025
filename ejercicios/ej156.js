@@ -1,14 +1,11 @@
-/* Vamos a crear una colección de juegos y los vamos a listar (mostrar en consola)
-
-Los juegos tienen las siguientes propiedades y métodos:
-
-propiedad: nombre, tipo de dato: string
-propiedad: precio, tipo de dato: number
-propiedad: cantidadVendida, tipo de dato: number
-propiedad: localidad, tipo de dato: string
-Declarar la colección juegos, crear y asignar los siguientes juegos:
-
-Recorrer la colección juegos y mostrar en consola el listado de juegos de la siguiente manera: */
+/* Copiar y pegar el código del ejercicio 155
+Vamos a refactorizar el código:
+Agregar a los objetos juego un método que se llame imprimirEnPantalla con el siguiente formato:
+${nombre}
+$ ${precio}
+${cantidadVendida} vendidos
+${localidad}
+Modificar el código anterior y utilizar el método imprimirEnPantalla para mostrar el detalle de cada juego */
 
 const juegos = [
     {
@@ -98,14 +95,18 @@ function agregarPunto (precio) {
 }
 
 for (let i = 0; i < juegos.length; i++) {
-    console.log(juegos[i].nombre);
-
-    if (juegos[i].precio >= 1000) {
-        console.log("$", agregarPunto(juegos[i].precio));
-    } else {
-        console.log("$", juegos[i].precio);
+    juegos[i].imprimirEnPantalla = function () {
+        console.log(`${this.nombre}`);
+        if (juegos[i].precio >= 1000) {
+            console.log("$", agregarPunto(juegos[i].precio));
+        } else {
+            console.log("$", juegos[i].precio);
+        }
+        console.log(`${this.cantidadVendida} vendidos`);
+        console.log(`${this.localidad} \n`);
     }
+}
 
-    console.log(juegos[i].cantidadVendida, "vendidos");
-    console.log(juegos[i].localidad, "\n");
+for (let i = 0; i < juegos.length; i++) {
+    juegos[i].imprimirEnPantalla();
 }

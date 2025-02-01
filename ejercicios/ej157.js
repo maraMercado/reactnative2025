@@ -1,14 +1,12 @@
-/* Vamos a crear una colección de juegos y los vamos a listar (mostrar en consola)
-
-Los juegos tienen las siguientes propiedades y métodos:
-
-propiedad: nombre, tipo de dato: string
-propiedad: precio, tipo de dato: number
-propiedad: cantidadVendida, tipo de dato: number
-propiedad: localidad, tipo de dato: string
-Declarar la colección juegos, crear y asignar los siguientes juegos:
-
-Recorrer la colección juegos y mostrar en consola el listado de juegos de la siguiente manera: */
+/* Copiar y pegar el código del ejercicio 156
+Refactorizar el código de la siguiente manera:
+Declarar una variable con el nombre zona y asignar un valor numérico de 1 a 3
+Declarar una variable localidadFiltrada
+Si zona es 1 entonces asignar a la variable localidadFiltrada el valor Capital Federal
+Si zona es 2 entonces asignar a la variable localidadFiltrada el valor Santa Fe
+Si zona es 3 entonces asignar a la variable localidadFiltrada el valor Buenos Aires
+Por defecto mostramos los productos de Capital Federal
+Mostrar en consola sólo los juegos que tienen la localidad localidadFiltrada */
 
 const juegos = [
     {
@@ -91,6 +89,22 @@ const juegos = [
     }
 ]
 
+const zona = 2;
+let localidadFiltrada;
+
+switch (zona) {
+    case 1: 
+    default:
+        localidadFiltrada = "Capital Federal";
+        break;
+    case 2:
+        localidadFiltrada = "Santa Fe";
+        break;
+    case 3:
+        localidadFiltrada = "Buenos Aires";
+        break;
+}
+
 function agregarPunto (precio) {
     precio = precio.toString();
     let precioConPunto = precio.charAt(0) + "." + precio.slice(1);
@@ -98,14 +112,20 @@ function agregarPunto (precio) {
 }
 
 for (let i = 0; i < juegos.length; i++) {
-    console.log(juegos[i].nombre);
-
-    if (juegos[i].precio >= 1000) {
-        console.log("$", agregarPunto(juegos[i].precio));
-    } else {
-        console.log("$", juegos[i].precio);
+    juegos[i].imprimirEnPantalla = function () {
+        console.log(`${this.nombre}`);
+        if (juegos[i].precio >= 1000) {
+            console.log("$", agregarPunto(juegos[i].precio));
+        } else {
+            console.log("$", juegos[i].precio);
+        }
+        console.log(`${this.cantidadVendida} vendidos`);
+        console.log(`${this.localidad} \n`);
     }
+}
 
-    console.log(juegos[i].cantidadVendida, "vendidos");
-    console.log(juegos[i].localidad, "\n");
+for (let i = 0; i < juegos.length; i++) {
+    if (juegos[i].localidad === localidadFiltrada) {
+        juegos[i].imprimirEnPantalla();
+    }
 }

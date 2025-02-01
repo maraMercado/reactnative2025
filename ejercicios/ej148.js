@@ -14,15 +14,21 @@ superheroe.nombreSecreto = "Bruce";
 superheroe.ayudantes = ["Robin", "Alfred", "Gordon"];
 superheroe.fuerza = 70;
 
-/* 
-1- entrar al objeto superheroe
-2- ciclo: por cada propiedad, mostrar su valor.
-*/
+/* Mostrar las propiedades con forEach
 
 const propiedades = Object.keys(superheroe);
 
 propiedades.forEach (function (valor) {
     console.log(superheroe[valor]);
-})
+}) */
 
-console.log(superheroe.intelecto);
+
+// Mostrar propiedades con for
+const propiedades = Object.keys(superheroe);
+
+for (let i = 0; i < propiedades.length; i++) {
+    prop = propiedades[i]; // iteracion 1: nombre - iteracion 2: nombreSecreto
+    console.log(`Propiedad ${prop}:`, superheroe[prop]); // iteracion 1: superheroe.nombre - iteracion 2: superheroe.nombreSecreto
+}
+
+console.log(superheroe.intelecto); // undefined xq esa prop no existe

@@ -25,7 +25,7 @@ const usuario = {
 
     password: null,
 
-    saludar: () => this.username !== null ? console.log("Hola, soy el usuario: " + usuario.username) : console.log("Este usuario no tiene username"),
+    saludar: () => this.username !== null ? console.log(`Hola, soy el usuario ${usuario.username}`) : console.log("Este usuario no tiene username"),
 
     updateUsername: (nuevoUsername) => usuario.username = nuevoUsername,
 

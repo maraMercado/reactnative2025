@@ -1,14 +1,10 @@
-/* Vamos a crear una colección de juegos y los vamos a listar (mostrar en consola)
+/* Declarar un array con el nombre propiedades y asignar los siguientes valores: nombre, precio, cantidadVendida y localidad
+Copiar y pegar la lista de juegos del ejercicio 155
+Recorrer la lista de juegos y mostrar el valor de cada propiedad de cada juego utilizando los valores de la variable propiedades
+Ejemplo para mostrar la propiedad nombre de cada juego utilizar el primer elemento de la variable propiedades
+Hacer esto con el resto de las propiedades */
 
-Los juegos tienen las siguientes propiedades y métodos:
-
-propiedad: nombre, tipo de dato: string
-propiedad: precio, tipo de dato: number
-propiedad: cantidadVendida, tipo de dato: number
-propiedad: localidad, tipo de dato: string
-Declarar la colección juegos, crear y asignar los siguientes juegos:
-
-Recorrer la colección juegos y mostrar en consola el listado de juegos de la siguiente manera: */
+const propiedades = ["nombre", "precio", "cantidadVendida", "localidad"];
 
 const juegos = [
     {
@@ -91,21 +87,9 @@ const juegos = [
     }
 ]
 
-function agregarPunto (precio) {
-    precio = precio.toString();
-    let precioConPunto = precio.charAt(0) + "." + precio.slice(1);
-    return precioConPunto;
-}
-
 for (let i = 0; i < juegos.length; i++) {
-    console.log(juegos[i].nombre);
-
-    if (juegos[i].precio >= 1000) {
-        console.log("$", agregarPunto(juegos[i].precio));
-    } else {
-        console.log("$", juegos[i].precio);
+    for (let j = 0; j < propiedades.length; j++) {
+    console.log(juegos[i][propiedades[j]]);
     }
-
-    console.log(juegos[i].cantidadVendida, "vendidos");
-    console.log(juegos[i].localidad, "\n");
+    console.log("\n");
 }

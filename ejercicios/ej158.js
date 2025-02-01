@@ -1,14 +1,15 @@
-/* Vamos a crear una colección de juegos y los vamos a listar (mostrar en consola)
-
-Los juegos tienen las siguientes propiedades y métodos:
-
-propiedad: nombre, tipo de dato: string
-propiedad: precio, tipo de dato: number
-propiedad: cantidadVendida, tipo de dato: number
-propiedad: localidad, tipo de dato: string
-Declarar la colección juegos, crear y asignar los siguientes juegos:
-
-Recorrer la colección juegos y mostrar en consola el listado de juegos de la siguiente manera: */
+/* Copiar y pegar el código del ejercicio 157
+Refactorizar el código:
+Crear una función para ordenar los juegos según precio
+Esta función tiene acepta un parámetro que es un string con los siguientes posibles valores: 'ASC' o 'DESC'
+Si el parámetro es 'ASC' ordena los productos de manera ascendente
+Si el parámetro es 'DESC' ordena los productos de manera descendente
+Por defecto mostramos los productos de manera descendente
+Listar los productos de la siguiente manera:
+Ordenados por precio ascendente
+Ordenados por precio descendente
+Filtrar por la localidad Capitál Federal ordenados de manera descendente
+AYUDA: SORT ASC & DESC */
 
 const juegos = [
     {
@@ -91,21 +92,57 @@ const juegos = [
     }
 ]
 
+const zona = 1;
+let localidadFiltrada;
+
+switch (zona) {
+    case 1: 
+    default:
+        localidadFiltrada = "Capital Federal";
+        break;
+    case 2:
+        localidadFiltrada = "Santa Fe";
+        break;
+    case 3:
+        localidadFiltrada = "Buenos Aires";
+        break;
+}
+
 function agregarPunto (precio) {
     precio = precio.toString();
     let precioConPunto = precio.charAt(0) + "." + precio.slice(1);
     return precioConPunto;
 }
 
-for (let i = 0; i < juegos.length; i++) {
-    console.log(juegos[i].nombre);
-
-    if (juegos[i].precio >= 1000) {
-        console.log("$", agregarPunto(juegos[i].precio));
-    } else {
-        console.log("$", juegos[i].precio);
+function ordenarPorPrecio (sortBy) {
+    if (sortBy === "ASC") {
+        juegos.sort(function (a, b) {
+            return parseFloat(a.precio) - parseFloat(b.precio);
+        })
+    } else if (sortBy === "DESC" || typeof sortBy === "undefined") {
+        juegos.sort(function (a, b) {
+            return parseFloat(b.precio) - parseFloat(a.precio);
+        })
     }
+}
 
-    console.log(juegos[i].cantidadVendida, "vendidos");
-    console.log(juegos[i].localidad, "\n");
+ordenarPorPrecio();
+
+for (let i = 0; i < juegos.length; i++) {
+    juegos[i].imprimirEnPantalla = function () {
+        console.log(`${this.nombre}`);
+        if (juegos[i].precio >= 1000) {
+            console.log("$", agregarPunto(juegos[i].precio));
+        } else {
+            console.log("$", juegos[i].precio);
+        }
+        console.log(`${this.cantidadVendida} vendidos`);
+        console.log(`${this.localidad} \n`);
+    }
+}
+
+for (let i = 0; i < juegos.length; i++) {
+    if (juegos[i].localidad === localidadFiltrada) {
+        juegos[i].imprimirEnPantalla();
+    }
 }
