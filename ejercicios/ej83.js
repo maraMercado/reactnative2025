@@ -16,3 +16,19 @@
 1  *
    1
 */
+
+let counter = 14;
+let cantAsteriscos = 14;
+let i = 1;
+let mensaje = "";
+
+while (i <= counter) {
+   do {
+      mensaje +="*";
+      cantAsteriscos--;
+   } while (cantAsteriscos > 0);
+   console.log(mensaje);
+   mensaje = "";
+   cantAsteriscos = counter - i; // cantAst = 13.
+   i++;
+}
