@@ -4,10 +4,11 @@ Al ejecutar la función debe saludar a todos los nombres que sean pasados.
 Llamar a la función saludar con los siguientes parámetros "Nicolas", "Natalia", "Javier", "Ana". */
 
 function saludar () {
-    console.log(`Hola ${arguments[0]}`);
+    
+    const propiedades = Object.keys(arguments);
+
+    propiedades.forEach((propiedad) => console.log("Hola", arguments[propiedad]))
+    
 }
 
-saludar("Nicolas");
-saludar("Natalia");
-saludar("Javier");
-saludar("Ana");
+saludar("Nicolas", "Natalia", "Javier", "Ana");
