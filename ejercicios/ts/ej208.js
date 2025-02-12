@@ -1,3 +1,4 @@
+"use strict";
 /* Crear una función con el nombre sumarNumeros
 La función sumarNumeros acepta dos parámetros con el nombre de inicio y fin
 Agregar el tipo de dato para cada parámetro
@@ -10,6 +11,7 @@ sumarNumeros(0, 10);
 sumarNumeros(20, 30);
 sumarNumeros(5, 50);
 */
+Object.defineProperty(exports, "__esModule", { value: true });
 function sumarNumeros(inicio, fin) {
     var resultado = 0;
     for (inicio; inicio <= fin; inicio++) {
