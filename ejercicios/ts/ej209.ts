@@ -19,8 +19,8 @@ enum IconSize {
 }
 
 const icono: { // icono es un objeto que tiene una propiedad nombre de tipo string y otra tamanio de tipo iconsize
-    nombre: string,
-    tamanio: IconSize,
+    nombre: string;
+    tamanio: IconSize;
 } = {
     nombre: "wave",
     tamanio: IconSize.XL // como ya declaramos el tipo de la constante icono (objeto) y de sus props, asignamos valores 
