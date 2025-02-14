@@ -47,8 +47,8 @@ function mostrarDatosAuto(_a) {
 }
 ;
 function mostrarDatosCamion(_a) {
-    var marca = _a.marca, modelo = _a.modelo, color = _a.color, cantidadDeAcoplados = _a.cantidadDeAcoplados;
-    console.log("Marca: ".concat(marca, "\nModelo: ").concat(modelo, "\nColor: ").concat(color, "\nCantidad de acoplados: ").concat(cantidadDeAcoplados));
+    var marca = _a.marca, modelo = _a.modelo, color = _a.color, cantidadDePasajeros = _a.cantidadDePasajeros, cantidadDeAcoplados = _a.cantidadDeAcoplados;
+    console.log("Marca: ".concat(marca, "\n\n        Modelo: ").concat(modelo, "\n\n        Color: ").concat(color, "\n\n        Cantidad de pasajeros: ").concat(cantidadDePasajeros, "\n\n        Cantidad de acoplados: ").concat(cantidadDeAcoplados));
 }
 ;
 var auto = {
@@ -62,6 +62,7 @@ var camion = {
     marca: "Volvo",
     modelo: "FH16",
     color: "Rojo",
+    cantidadDePasajeros: 3,
     cantidadDeAcoplados: 2,
 };
 mostrarDatosAuto(auto);

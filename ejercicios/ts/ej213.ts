@@ -57,7 +57,11 @@ function mostrarDatosAuto({ marca, modelo, color, cantidadDePasajeros, esDescapo
 };
 
 function mostrarDatosCamion({ marca, modelo, color, cantidadDePasajeros, cantidadDeAcoplados}: Camion) {
-    console.log(`Marca: ${marca}\nModelo: ${modelo}\nColor: ${color}\nCantidad de pasajeros: ${cantidadDePasajeros}\nCantidad de acoplados: ${cantidadDeAcoplados}`);
+    console.log(`Marca: ${marca}\n
+        Modelo: ${modelo}\n
+        Color: ${color}\n
+        Cantidad de pasajeros: ${cantidadDePasajeros}\n
+        Cantidad de acoplados: ${cantidadDeAcoplados}`);
 };
 
 const auto: Auto = {
