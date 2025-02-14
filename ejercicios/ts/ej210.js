@@ -15,9 +15,11 @@ var mascota = {
     fechaDeNacimiento: "25/06/2015"
 };
 function mostrarDatosMascota(mascota) {
+    
+    console.log("La mascota se llama ".concat(mascota.nombre, " y tiene ").concat(mascota.edad, " a\u00F1os"));
+
     if (mascota.fechaDeNacimiento) {
         console.log("".concat(mascota.nombre, " naci\u00F3 el ").concat(mascota.fechaDeNacimiento));
     }
-    console.log("La mascota se llama ".concat(mascota.nombre, " y tiene ").concat(mascota.edad, " a\u00F1os"));
 }
 mostrarDatosMascota(mascota);
