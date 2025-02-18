@@ -1,3 +1,3 @@
-let saludo = "ECMAScript rocks!!";
+export let saludo = "ECMAScript rocks!!";
 
 console.log(saludo);

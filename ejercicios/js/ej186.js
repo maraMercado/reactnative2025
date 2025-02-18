@@ -4,7 +4,7 @@ Crear una nuva variable con el nombre promesa y asignar el resultado de ejecutar
 Llamar al método then de la variable promesa y pasar como parámetro una arrow function que acepte como parámetro un mensaje.
 Mostrar en pantalla el mensaje obtenido luego que la promise fué exitosa. */
 
-function crearPromesa (mensaje) {
+export function crearPromesa (mensaje) {
     return new Promise ((onSuccess) => { // onSuccess = resolve.
         onSuccess(mensaje); // Resolvé la promesa con un mensaje que se designa al crear la promesa.
     });

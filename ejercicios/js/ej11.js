@@ -1,1 +1,3 @@
-console.log("Me gusta mucho ECMAScript");
+export function mostrarEnPantalla() {
+    console.log("Me gusta mucho ECMAScript");
+} 

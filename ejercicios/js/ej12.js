@@ -1,4 +1,6 @@
 let nombre = "Mara";
 let saludo = "Bienvenido/a";
 
-console.log(saludo + " " + nombre);
+export function mostrarVariablesConcatenadas() {
+    console.log(saludo + " " + nombre);
+}
