@@ -1,4 +1,6 @@
 const nombre = "Mara";
 nombre = "Pepita";
 
-console.log(nombre);
+export function mostrarNombre() {
+    console.log(nombre);
+}
