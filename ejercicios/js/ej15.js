@@ -1,2 +1,5 @@
 let alumno = "Mara";
-console.log(`El mejor alumno es: ${alumno}`);
+
+export function interpolacion() {
+    console.log(`El mejor alumno es: ${alumno}`);
+}

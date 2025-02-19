@@ -1,2 +1,5 @@
 let texto = "hola mundo";
-console.log(texto.toUpperCase());
+
+export function mayus() {
+    console.log(texto.toUpperCase());
+}

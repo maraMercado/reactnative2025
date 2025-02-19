@@ -3,6 +3,8 @@ let promedioDelAlumno;
 
 promedioDelAlumno = 4;
 
-console.log(`El alumno tiene un promedio mayor o igual que el requerido: ${promedioDelAlumno >= promedioParaAprobar}`);
+export function bool4() {
+    console.log(`El alumno tiene un promedio mayor o igual que el requerido: ${promedioDelAlumno >= promedioParaAprobar}`);
 
-console.log(`Al alumno le faltaron ${promedioParaAprobar - promedioDelAlumno} puntos para aprobar`);
+    console.log(`Al alumno le faltaron ${promedioParaAprobar - promedioDelAlumno} puntos para aprobar`);
+}

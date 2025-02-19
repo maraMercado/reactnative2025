@@ -1,3 +1,6 @@
 let local = "Gianu's";
 let mensaje = 'es el "mejor" local';
-console.log(local + " " + mensaje);
+
+export function probandoComas() {
+    console.log(local + " " + mensaje);
+}

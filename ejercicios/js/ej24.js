@@ -1,2 +1,5 @@
 let nombre = null;
-console.log("nombre", nombre);
+
+export function n() {
+    console.log("nombre", nombre);
+}

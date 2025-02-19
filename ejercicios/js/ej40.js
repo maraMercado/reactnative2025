@@ -1,4 +1,6 @@
 let texto = "Usando el método";
 let metodo = "concat";
 
-console.log(texto.concat(" ", metodo));
+export function concatenando() {
+    console.log(texto.concat(" ", metodo));
+}

@@ -1,2 +1,5 @@
 let texto = "HOLA MUNDO";
-console.log(texto.toLowerCase());
+
+export function minus() {
+    console.log(texto.toLowerCase());
+}

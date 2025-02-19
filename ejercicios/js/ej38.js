@@ -1,2 +1,5 @@
 const nombre = "Mara";
-console.log(nombre.length);
+
+export function strLength() {
+    console.log(nombre.length);
+}

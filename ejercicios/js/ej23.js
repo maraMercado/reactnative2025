@@ -1,2 +1,6 @@
 let nombre;
-console.log("nombre", nombre);
+
+export function un() {
+    console.log("nombre", nombre);
+}
+
