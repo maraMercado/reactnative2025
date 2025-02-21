@@ -13,7 +13,7 @@ multiplicar(3, 100)
 dividir(40, 2)
 mostrarModulo(20, 2) */
 
-const aritmetica = {
+export const aritmetica = {
     suma: (num1, num2) => 
         typeof num1 === "number" && typeof num2 === "number" 
         ? console.log(`${num1} + ${num2} =`, num1 + num2) 

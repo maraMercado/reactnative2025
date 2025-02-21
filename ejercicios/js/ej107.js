@@ -4,7 +4,7 @@ Mostrar en consola el siguiente mensaje: El número ${numero1} es más grande qu
 Agregar la validación para ver si son el mismo número, en caso de que así sea agregar el mensaje: Los dos números son ${numero1}
 Validar que los parámetros que nos pasaron sean del tipo number, caso contrario mostrar un mensaje en consola que diga: Esta función espera valores del tipo number */
 
-function numeroMasGrande(numero1, numero2) {
+export function numeroMasGrande(numero1, numero2) {
     if (typeof numero1 === "number" && typeof numero2 === "number") {
         switch (true) {
             case numero1 > numero2:

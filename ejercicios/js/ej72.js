@@ -21,8 +21,9 @@ let counter = 1;
 let cantAsteriscos = 14;
 let ast = "";
 
-while (counter <= cantAsteriscos) {
+export function patronAst() {
+    while (counter <= cantAsteriscos) {
     ast += "*";
     console.log(ast)
     counter++;
-}
+}}

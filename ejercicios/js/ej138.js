@@ -26,7 +26,7 @@ console.table(mutantesNuevos);
 
 // Forma del profe:
 
-const listaModificada = mutantes.map(function(mutante) {
+export const listaModificada = mutantes.map(function(mutante) {
     if (
         mutante === "Prof. Charles Francis Xavier" || 
         mutante === "James \"Logan\" Howlett" ||

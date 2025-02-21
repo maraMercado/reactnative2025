@@ -25,10 +25,12 @@ propiedades.forEach (function (valor) {
 
 // Mostrar propiedades con for
 const propiedades = Object.keys(superheroe);
+let prop;
 
-for (let i = 0; i < propiedades.length; i++) {
+export function recorrerObj() {
+    for (let i = 0; i < propiedades.length; i++) {
     prop = propiedades[i]; // iteracion 1: nombre - iteracion 2: nombreSecreto
-    console.log(`Propiedad ${prop}:`, superheroe[prop]); // iteracion 1: superheroe.nombre - iteracion 2: superheroe.nombreSecreto
-}
+    console.log(`Propiedad ${prop}: ${superheroe[prop]}`); // iteracion 1: superheroe.nombre - iteracion 2: superheroe.nombreSecreto
+}}
 
 console.log(superheroe.intelecto); // undefined xq esa prop no existe
