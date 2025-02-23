@@ -25,13 +25,13 @@ Tip: vas a necesitar alguna función auxiliar que sea async & await para hacerlo
 
 const POKE_API_URL = "https://pokeapi.co/api/v2/pokemon?limit=20"; // andá a la primera pag (no especificamos offset así que lo toma como offset=0) y dame los primeros 20
 
-async function getPokemones() {
+export async function getPokemones() {
   
     try {
         const response = await fetch(POKE_API_URL);
         const pokemones = await response.json();
 
-        for(objetoPokemon of pokemones.results) {
+        for(let objetoPokemon of pokemones.results) {
             console.log(`* Pokemon: ${objetoPokemon.name.charAt(0).toUpperCase()}${objetoPokemon.name.substr(1)}`);
         }
         
@@ -41,4 +41,4 @@ async function getPokemones() {
 
 }
 
-getPokemones();
+// getPokemones();

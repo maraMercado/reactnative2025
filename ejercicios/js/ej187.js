@@ -6,9 +6,7 @@ Crear una variable promesa y asignar el valor retornado por la función crearPro
 Encontrar la forma de mostrar un mensaje de éxito si todo salió bien y uno de error en caso de que la promesa no se cumpliera (muy feo no cumplir las promesas!!!)
 Pobrar ejecutar el código cambiando el valor de la variable tieneError para ver ambos casos. */
 
-const tieneError = false;
-
-function crearPromesa () {
+export function crearPromesa (tieneError = false) {
     return new Promise ((onSuccess, onError) => {
 
         if (tieneError) {

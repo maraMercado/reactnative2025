@@ -42,7 +42,7 @@ fetch(POKE_API_URL)
 })
 
 .then( (data) => {
-  for(objetoPokemon of data.results) {
+  for(let objetoPokemon of data.results) {
     console.log(`* Pokemon: ${objetoPokemon.name.charAt(0).toUpperCase()}${objetoPokemon.name.substr(1)}`)
   }
 })

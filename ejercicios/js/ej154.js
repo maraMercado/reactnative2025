@@ -42,7 +42,7 @@ El jugador pierde una vida
 Luego de cada acción mostrar el estado del objeto jugador El jugador ${nombre} tiene ${energia}% de energía y ${vidas} vidas
 */
 
-const jugador = {
+export const jugador = {
     nombre: null,
 
     energia: 100,
@@ -109,19 +109,19 @@ const jugador = {
     } 
 }
 
-jugador.nombre = "mara24";
+// jugador.nombre = "mara24";
 
-jugador.perderVida(1);
-jugador.perderEnergia(10);
-jugador.perderEnergia(15);
-jugador.perderEnergia(5);
-jugador.perderEnergia(20);
-jugador.recuperarEnergia(10);
-jugador.perderEnergia(30);
-jugador.perderEnergia(40);
-jugador.perderVida(1);
-jugador.perderVida(1);
-jugador.recuperarVida(1);
-jugador.recuperarVida(1);
-jugador.recuperarVida(1);
-jugador.perderVida(1);
+// jugador.perderVida(1);
+// jugador.perderEnergia(10);
+// jugador.perderEnergia(15);
+// jugador.perderEnergia(5);
+// jugador.perderEnergia(20);
+// jugador.recuperarEnergia(10);
+// jugador.perderEnergia(30);
+// jugador.perderEnergia(40);
+// jugador.perderVida(1);
+// jugador.perderVida(1);
+// jugador.recuperarVida(1);
+// jugador.recuperarVida(1);
+// jugador.recuperarVida(1);
+// jugador.perderVida(1);

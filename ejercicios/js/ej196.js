@@ -26,7 +26,7 @@ Black
 Honda Pilot 2025
 Dark Blue */
 
-function Vehiculo (marca, modelo, cantidadDePuertas, anio, color) {
+export function Vehiculo (marca, modelo, cantidadDePuertas, anio, color) {
     this.marca = marca;
     this.modelo = modelo;
     this.cantidadDePuertas = cantidadDePuertas;

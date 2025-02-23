@@ -6,9 +6,9 @@ Llamar a la función map pasando la colección numeros y una función que multip
 La idea es crear nuestro propio map sin utilizar el método del Array.
 Mostrar la nueva colección en pantalla */
 
-const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+export const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-function map (array, funcion) {
+export function map (array, funcion) {
     
     var nuevoArray = [];
     
@@ -19,9 +19,9 @@ function map (array, funcion) {
     return nuevoArray;
 }
 
-function multiplicarPorDos (numero) {
+export function multiplicarPorDos (numero) {
     return numero * 2;
 }
 
-console.log(map(numeros, multiplicarPorDos));
-console.log(numeros);
+// console.log(map(numeros, multiplicarPorDos));
+// console.log(numeros);

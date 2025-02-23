@@ -44,12 +44,12 @@ setTimeout(() => clearInterval(intervalo), 10000); */
 
 // Challenge
 
-let contador = "*";
+export let contador = "*";
 
-const intervalo = setInterval(() => {
+export const intervalo = () => setInterval(() => {
     console.log(contador);
     contador += "*";
 
 }, 1000);
 
-setTimeout(() => clearInterval(intervalo), 10000);
+// setTimeout(() => clearInterval(intervalo), 5000);

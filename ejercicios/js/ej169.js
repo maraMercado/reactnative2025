@@ -2,7 +2,7 @@
 Como parte del ejercicio escribe lo que pasa. */
 
 
-function obtenerFuncion() {
+export function obtenerFuncion() {
   const nombre = "JavaScript";
 
   function mostrarMensaje() {
@@ -12,4 +12,4 @@ function obtenerFuncion() {
   mostrarMensaje();
 }
 
-obtenerFuncion(); // Podemos acceder, porque mostrarMensaje() accede a una variable superior, de adentro hacia afuera.
+// obtenerFuncion();  Podemos acceder, porque mostrarMensaje() accede a una variable superior, de adentro hacia afuera.

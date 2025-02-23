@@ -4,7 +4,7 @@ Crear una función con el nombre mostrarPromesa que acepta un mensaje como pará
 La función mostrarPromesa es una función async y nos permite usar await adentro para esperar el resultado de llamar a la función crearPromesa.
 Ejecutar la función mostrarPromesa pasando como parámetro Wow, estamos usando async / await. */
 
-function crearPromesa (mensaje) {
+export function crearPromesa (mensaje) {
     return new Promise ((onSuccess) => { // onSuccess = resolve.
         
         const onSuccessHandler = () => onSuccess(mensaje); // es la función que resuelve la promesa.
@@ -13,7 +13,7 @@ function crearPromesa (mensaje) {
     });
 }
 
-async function mostrarPromesa(msg) {
+export async function mostrarPromesa(msg) {
     
     const promesa = await crearPromesa(msg); // Creamos la promesa con el mensaje X. Espera 5 segundos, y si le fue bien, la guarda en la constante y la retorna.
     return promesa;
