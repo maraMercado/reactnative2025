@@ -11,7 +11,7 @@ sumarNumeros(20, 30);
 sumarNumeros(5, 50);
 */
 
-function sumarNumeros(inicio: number, fin: number): string {
+export function sumarNumeros(inicio: number, fin: number): string {
     let resultado: number = 0;
 
     for(inicio; inicio <= fin; inicio++) {
@@ -22,8 +22,6 @@ function sumarNumeros(inicio: number, fin: number): string {
 
 }
 
-console.log(sumarNumeros(0, 10));
-console.log(sumarNumeros(20, 30));
-console.log(sumarNumeros(5, 50));
-
-export {};
+// console.log(sumarNumeros(0, 10));
+// console.log(sumarNumeros(20, 30));
+// console.log(sumarNumeros(5, 50));

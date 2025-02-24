@@ -18,7 +18,7 @@ Agrega el tipo que corresponde a la colección vehiculos */
 const notas: number[] = [6, 8, 7.5];
 const notas2: Array<number> = [5, 4, 8];
 
-class Vehiculo {
+export class Vehiculo {
     marca: string;
     modelo: string; 
     anio: number;
@@ -38,5 +38,3 @@ const auto3 = new Vehiculo("Honda", "Pilot", 2020, "blanco");
 const auto4 = new Vehiculo("Honda", "CR-V", 2015, "rojo");
 
 const vehiculos: Array<Vehiculo> = [auto1, auto2, auto3, auto4];
-
-export {};

@@ -8,7 +8,7 @@ También la función debe mostrar siempre el siguiente mensaje La mascota se lla
 Llamar a la función pasando al objeto mascota como parámetro pero sin la fecha de nacimiento
 Modificar el objeto y agregar una fecha de nacimiento y volver a compilar / ejecutar el programa */
 
-const mascota: {
+export const mascota: {
     nombre: string;
     edad: number;
     fechaDeNacimiento?: string;
@@ -18,14 +18,12 @@ const mascota: {
     fechaDeNacimiento: "25/06/2015"
 }
 
-function mostrarDatosMascota(mascota: {nombre: string; edad: number; fechaDeNacimiento?: string;}) { // el nombre del objeto no necesariamente tiene que coincidir con el parametro. en la ejecución el objeto puede ser cualquiera siempre y cuando cumpla los requisitos de tener propiedad nombre de tipo string, edad number y opc fecha de nac.
+export function mostrarDatosMascota(mascota: {nombre: string; edad: number; fechaDeNacimiento?: string;}) { // el nombre del objeto no necesariamente tiene que coincidir con el parametro. en la ejecución el objeto puede ser cualquiera siempre y cuando cumpla los requisitos de tener propiedad nombre de tipo string, edad number y opc fecha de nac.
+    console.log(`La mascota se llama ${mascota.nombre} y tiene ${mascota.edad} años`);
+
     if (mascota.fechaDeNacimiento) {
         console.log(`${mascota.nombre} nació el ${mascota.fechaDeNacimiento}`);
     }
-
-    console.log(`La mascota se llama ${mascota.nombre} y tiene ${mascota.edad} años`);
 }
 
-mostrarDatosMascota(mascota);
-
-export {};
+// mostrarDatosMascota(mascota);

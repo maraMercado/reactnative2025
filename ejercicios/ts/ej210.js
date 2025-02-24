@@ -9,17 +9,17 @@ También la función debe mostrar siempre el siguiente mensaje La mascota se lla
 Llamar a la función pasando al objeto mascota como parámetro pero sin la fecha de nacimiento
 Modificar el objeto y agregar una fecha de nacimiento y volver a compilar / ejecutar el programa */
 Object.defineProperty(exports, "__esModule", { value: true });
-var mascota = {
+exports.mascota = void 0;
+exports.mostrarDatosMascota = mostrarDatosMascota;
+exports.mascota = {
     nombre: "Blacky",
     edad: 9,
     fechaDeNacimiento: "25/06/2015"
 };
 function mostrarDatosMascota(mascota) {
-    
     console.log("La mascota se llama ".concat(mascota.nombre, " y tiene ").concat(mascota.edad, " a\u00F1os"));
-
     if (mascota.fechaDeNacimiento) {
         console.log("".concat(mascota.nombre, " naci\u00F3 el ").concat(mascota.fechaDeNacimiento));
     }
 }
-mostrarDatosMascota(mascota);
+// mostrarDatosMascota(mascota);

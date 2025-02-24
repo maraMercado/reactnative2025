@@ -3,8 +3,9 @@
 Modificar el código para utilizar una interface Mascota en lugar de un alias type Mascota
 El resto del ejercicio debe funcionar de la misma manera */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.miMascota = void 0;
 ;
-var miMascota = {
+exports.miMascota = {
     nombre: "Blacky",
     edad: 9,
     fechaDeNacimiento: "25/06/2015"
@@ -19,5 +20,5 @@ function mostrarDatosMascota(mascota) {
         console.log("".concat(mascota.nombre, " naci\u00F3 el ").concat(mascota.fechaDeNacimiento));
     }
 }
-mostrarDatosMascota(miMascota);
-mostrarDatosMascota(tuMascota);
+//mostrarDatosMascota(miMascota);
+//mostrarDatosMascota(tuMascota);

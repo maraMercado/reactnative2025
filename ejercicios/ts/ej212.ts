@@ -27,7 +27,5 @@ function mostrarDatosMascota(mascota: Mascota) {
     }
 }
 
-mostrarDatosMascota(miMascota);
-mostrarDatosMascota(tuMascota);
-
-export {};
+//mostrarDatosMascota(miMascota);
+//mostrarDatosMascota(tuMascota);

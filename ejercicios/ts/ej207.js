@@ -16,6 +16,7 @@ Crea 4 instancias de la clase Vehiculo asignando los siguientes valores:
 Crea una colección con el nombre vehiculos que tenga como elementos las 4 instancias de Vehiculo
 Agrega el tipo que corresponde a la colección vehiculos */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Vehiculo = void 0;
 var notas = [6, 8, 7.5];
 var notas2 = [5, 4, 8];
 var Vehiculo = /** @class */ (function () {
@@ -27,6 +28,7 @@ var Vehiculo = /** @class */ (function () {
     }
     return Vehiculo;
 }());
+exports.Vehiculo = Vehiculo;
 var auto1 = new Vehiculo("Toyota", "Rav4", 2024, "negro");
 var auto2 = new Vehiculo("Toyota", "4Runner", 2010, "gris");
 var auto3 = new Vehiculo("Honda", "Pilot", 2020, "blanco");
